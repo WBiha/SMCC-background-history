@@ -1,0 +1,25 @@
+
+:root{--green-dark:#013220;--text-dark:#000000;--hover:#FFF9C4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Cal Sans",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text-dark);background:url('../images/hero.jpg') center/cover no-repeat fixed;padding-top:calc(0.5in + 3rem)}
+header{position:relative}
+nav[aria-label="Primary"]{position:fixed;left:0;right:0;top:0.5in;background:var(--green-dark);color:#fff;display:flex;justify-content:center;gap:.75rem;padding:.75rem 1rem}
+nav[aria-label="Primary"] a{color:#fff;text-decoration:none;font-weight:600}
+nav[aria-label="Primary"] .sep{color:#fff;opacity:.6}
+nav[aria-label="Primary"] a:hover{color:var(--hover)}
+main{width:60%;margin:1.25rem auto;background-color:rgba(255,255,255,.8);padding:1rem 1.25rem;line-height:1.5;border-radius:12px}
+main>h1,main>h2{text-align:center;margin-top:0}
+figure.float-left{float:left;margin:0 1rem 1rem 0;max-width:45%}
+figure.float-right{float:right;margin:0 0 1rem 1rem;max-width:45%}
+figcaption{font-size:.9rem;opacity:.8}
+.section-end{clear:both}
+nav[aria-label="SMCC background"]{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.75rem 1rem;justify-content:center}
+nav[aria-label="SMCC background"] a{color:var(--green-dark);font-weight:600;text-decoration:underline}
+nav[aria-label="SMCC background"] a:hover{color:var(--hover)}
+footer{background:var(--green-dark);color:#fff;text-align:center;padding:1rem;margin-top:2rem}
+.refs{font-size:.95rem}
+.refs ol{padding-left:1.25rem}
+.refs li{margin:.35rem 0}
+@media(max-width:900px){main{width:80%}}
+@media(max-width:600px){nav[aria-label="Primary"]{gap:.5rem;padding:.5rem .75rem}main{width:95%;padding:.75rem}figure.float-left,figure.float-right{float:none;margin:0 auto 1rem;max-width:100%}}

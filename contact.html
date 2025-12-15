@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Southern Maine Community College · Contact</title>
+  <link rel="stylesheet" href="assets/CSS/normalize.css" />
+  <link rel="stylesheet" href="assets/Font/fonts.css" />
+  <link rel="stylesheet" href="assets/CSS/styles.css" />
+</head>
+<body>
+  <header>
+<nav aria-label="Primary">
+  <a href="index.html">HOME</a>
+  <span class="sep">|</span>
+  <a href="about.html">About</a>
+  <span class="sep">|</span>
+  <a href="contact.html">Contact</a>
+</nav>
+</header>
+  <main>
+    <h1>Contact</h1>
+    
+<section>
+  <figure class="float-right">
+    <img src="assets/images/spring-point-ledge-light.jpg" alt="Spring Point Ledge Light near SMCC" />
+    <figcaption>Contact the project lead below</figcaption>
+  </figure>
+  <p>If you have questions or sources to contribute about SMCC history, use the form below or email <strong>walter.biha@mainecc.edu</strong>.</p>
+  <form id="contact-form" aria-label="Contact form">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send</button>
+  </form>
+  <div id="status" role="status" aria-live="polite" style="margin-top:.5rem"></div>
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('status');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email||!message){status.textContent='Please complete all fields.';status.style.color='red';return;}
+      status.textContent='Thanks! Your message is ready to send.';status.style.color='green';
+      const mailto='mailto:walter.biha@mainecc.edu?subject='+encodeURIComponent('SMCC History Inquiry from '+name)+'&body='+encodeURIComponent(message+'
+
+Reply to: '+email);
+      window.location.href=mailto;
+    });
+  </script>
+  <div class="section-end"></div>
+</section>
+
+    
+<nav aria-label="SMCC background">
+  <a href="background-overview.html">Background: Overview</a>
+  <a href="background-origins.html">Background: Origins</a>
+  <a href="background-timeline.html">Background: Timeline</a>
+  <a href="background-milestones.html">Background: Milestones</a>
+  <a href="background-archives.html">Background: Archives</a>
+</nav>
+
+    
+<section class="refs" id="sources">
+  <h2>Sources</h2>
+  <ol>
+    <li><a href="https://www.smccme.edu/wp-content/uploads/2025/06/SMCC_Factbook_2020-2021.pdf" target="_blank" rel="noopener">SMCC Factbook 2020–2021 (Brief History of SMCC)</a></li>
+    <li><a href="https://www.smccme.edu/smcc-to-celebrate-75th-anniversary-throughout-year-to-honor-proud-past/" target="_blank" rel="noopener">SMCC News: 75th Anniversary (Founded 1946)</a></li>
+    <li><a href="https://www.smccme.edu/smcc-celebrates-anniversary-of-first-classes-on-south-portland-campus/" target="_blank" rel="noopener">SMCC News: First Classes at South Portland (1952)</a></li>
+    <li><a href="https://www.smccme.edu/about/fort-preble-the-greenbelt/" target="_blank" rel="noopener">SMCC: Fort Preble & The Greenbelt</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Fort_Preble" target="_blank" rel="noopener">Fort Preble (overview)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Spring_Point_Ledge_Light" target="_blank" rel="noopener">Spring Point Ledge Light (overview)</a></li>
+    <li><a href="https://commons.wikimedia.org/wiki/File:Spring_Point_Ledge_Light_-_South_Portland,_Maine_-_IMG_8190.JPG" target="_blank" rel="noopener">Wikimedia: Spring Point Ledge Light (Public Domain image)</a></li>
+    <li><a href="https://commons.wikimedia.org/wiki/Category:Fort_Preble" target="_blank" rel="noopener">Wikimedia: Fort Preble (image category)</a></li>
+    <li><a href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Naval_Air_Station_Brunswick_in_1944.jpg" target="_blank" rel="noopener">Wikimedia: NAS Brunswick (Public Domain image)</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Naval_Air_Station_Brunswick" target="_blank" rel="noopener">Naval Air Station Brunswick (history)</a></li>
+  </ol>
+</section>
+
+  </main>
+  
+<footer>
+  <p>© <span id=year></span> Southern Maine Community College History · Student contact: <a href="mailto:walter.biha@mainecc.edu" style="color:#fff;text-decoration:underline;">walter.biha@mainecc.edu</a></p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
